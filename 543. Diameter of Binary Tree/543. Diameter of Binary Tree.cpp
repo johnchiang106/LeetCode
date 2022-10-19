@@ -10,14 +10,14 @@
  * };
  */
 int dfs(TreeNode* curr, int& maxD){
-    int pathL = -1, pathR = -1;
+    int pathL = 0, pathR = 0;
     if(curr->left){
         pathL = dfs(curr->left,maxD);
     }
     if(curr->right){
         pathR = dfs(curr->right,maxD);
     }
-    maxD = max(maxD,pathL+pathR+2);
+    maxD = max(maxD,pathL+pathR);
     // cout<<curr->val<<" "<<maxD<<endl;
     return max(pathL,pathR)+1;
 }
