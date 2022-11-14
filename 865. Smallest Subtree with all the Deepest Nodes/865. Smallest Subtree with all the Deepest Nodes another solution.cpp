@@ -12,14 +12,11 @@ public:
 private:
     int depth(TreeNode* root){
         if(!root)   return 0;
-        if(record.find(root) != record.end()){
+        if(record.find(root) != record.end())
             return record[root];
-        }
-        else{
-            int d = 1 + max(depth(root->left),depth(root->right));
-            record.insert({root,d});
-            return d;
-        }
+        int d = 1 + max(depth(root->left),depth(root->right));
+        record.insert({root,d});
+        return d;
     }
     unordered_map<TreeNode*,int> record;
 };
