@@ -19,4 +19,5 @@ public:
                 maxTime = it.second, ++ans;
         return ans;
     }
+    #undef pair_i_d
 };
