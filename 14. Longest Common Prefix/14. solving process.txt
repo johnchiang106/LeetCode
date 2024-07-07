@@ -1,0 +1,11 @@
+v1:
+1. find the shortest 2 strings
+2. see the prefix of them
+3. see if all the strings have those prefix
+v2:
+1. see the prefix of the first 2 strings
+2. see if all the strings have those prefix
+(v2 is pretty much as fast as v1)
+fast solution:
+1. sort the vector
+2. see the prefix of the first string and the last string
