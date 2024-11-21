@@ -30,8 +30,7 @@ public:
                     --ans;
                     continue;
                 }
-                if(grid[guard[0]][col] < 3
-                 || grid[guard[0]][col] == 4)    break;
+                if(grid[guard[0]][col] % 2 == 0)    break;
             }
             for(int col = guard[1]-1; col >= 0; --col){
                 if(grid[guard[0]][col] == 0){
@@ -39,8 +38,7 @@ public:
                     --ans;
                     continue;
                 }
-                if(grid[guard[0]][col] < 3
-                 || grid[guard[0]][col] == 4)    break;
+                if(grid[guard[0]][col] % 2 == 0)    break;
             }
         }
         return ans;
